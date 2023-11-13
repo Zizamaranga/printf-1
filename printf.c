@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- *
- *
- *
+ * _printf - this prints according to a specified format
+ * @format: this is the format string
+ * @...: this are the unknown arguments
+ * Return: this returns the length of the string printed
  */
 int _printf(const char *format, ...)
 {
@@ -11,6 +12,7 @@ int _printf(const char *format, ...)
 	int i;
 
 	va_list args;
+
 	va_start(args, format);
 
 	length = 0;
@@ -32,7 +34,7 @@ here:
 		{
 			length = length + m[j].f(args);
 			i += 2;
-`			goto here:
+`			goto here :
 		}
 		_putchar(format[i]);
 		length++;
