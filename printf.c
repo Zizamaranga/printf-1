@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"%n", printf_data},
 		{"%f", printf_float}
 	};
+
 	int j;
 	int i;
 	va_list args;
@@ -42,7 +43,7 @@ here:
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				length = length + m[j].f(va_list args);
+				length = length + m[j].f(args);
 				i += 2;
 				goto here;
 			}
