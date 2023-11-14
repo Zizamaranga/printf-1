@@ -4,10 +4,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
-typdef struct main
+
+typedef struct main
 {
 	char *id;
-	char *f;
+	int (*f)(const char *);
 }game;
 
 
